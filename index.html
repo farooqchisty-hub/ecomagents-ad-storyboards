@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ecom Agent OS Ad Storyboards</title>
+<meta name="description" content="Five ad worlds, fifty storyboarded Meta ads for Ecom Agent OS, for review before generation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16150f;--paper:#f4f1e8;--white:#fcfbf6;--lime:#cdf13b;--olive:#455517;--muted:#626258;--line:#d2d1c5;--card:#fcfbf6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#f1efe4;--paper:#14140f;--white:#1d1d17;--card:#1d1d17;--muted:#a6a595;--line:#34342a;--olive:#b9d45a}}
+:root[data-theme="dark"]{--ink:#f1efe4;--paper:#14140f;--white:#1d1d17;--card:#1d1d17;--muted:#a6a595;--line:#34342a;--olive:#b9d45a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Hanken Grotesk",system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0}
+h1{font-size:clamp(40px,7vw,84px)}
+h2{font-size:clamp(30px,4.6vw,54px)}
+h3{font-size:22px;letter-spacing:-.02em}
+.mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.hl{background:linear-gradient(transparent 62%,var(--lime) 62%);color:inherit}
+header.top{padding:56px 0 36px;border-bottom:1px solid var(--line)}
+.kicker{display:inline-flex;gap:8px;align-items:center;margin-bottom:18px}
+.kicker:before{content:"";width:12px;height:12px;background:var(--lime);border:1.5px solid #16150f;transform:rotate(-8deg)}
+.lede{max-width:760px;font-size:19px;color:var(--muted);margin:20px 0 0}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 20px}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--ink);border:1.5px solid var(--ink);padding:6px 12px;font-weight:600;font-size:14px;background:var(--card)}
+nav.toc a:hover{background:var(--lime);color:#16150f}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.box{background:var(--card);border:1.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:20px}
+.box.lime{background:var(--lime);color:#16150f}
+.box h3{margin-bottom:8px}
+.box p{margin:6px 0}
+ul.tight{margin:8px 0 0;padding-left:18px}ul.tight li{margin:4px 0}
+.refs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}
+@media(max-width:820px){.refs{grid-template-columns:repeat(2,1fr)}}
+.refs figure{margin:0;background:var(--card);border:1px solid var(--line);padding:8px}
+.refs img{width:100%;height:130px;object-fit:contain;display:block}
+.refs figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+.style-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:end;margin-bottom:26px}
+.num{font-family:"Bricolage Grotesque";font-weight:800;font-size:96px;line-height:.8;color:var(--lime);-webkit-text-stroke:2px var(--ink)}
+.swatches{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.sw{display:flex;align-items:center;gap:6px;font-size:12px;font-family:"JetBrains Mono";border:1px solid var(--line);padding:3px 8px 3px 3px;background:var(--card)}
+.sw i{width:18px;height:18px;display:block;border:1px solid rgba(0,0,0,.25)}
+dl.spec{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0}
+dl.spec dt{font-family:"JetBrains Mono";font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:3px}
+dl.spec dd{margin:0}
+@media(max-width:620px){dl.spec{grid-template-columns:1fr}dl.spec dt{padding-top:10px}}
+.ads{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+@media(max-width:820px){.ads{grid-template-columns:1fr}}
+.ad{background:var(--card);border:1.5px solid var(--ink);display:flex;flex-direction:column}
+.ad .bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--ink);padding:8px 14px;background:var(--lime);color:#16150f}
+.ad .bar.pick{background:#16150f;color:var(--lime)}
+.ad .body{padding:14px 16px 16px}
+.ad .hook{font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1.05;margin:4px 0 10px}
+.ad .row{display:grid;grid-template-columns:92px 1fr;gap:10px;font-size:14.5px;padding:6px 0;border-top:1px dashed var(--line)}
+.ad .row b{font-family:"JetBrains Mono";font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;padding-top:2px}
+.tag{display:inline-block;font-family:"JetBrains Mono";font-size:11px;border:1px solid currentColor;padding:1px 6px;margin-left:6px}
+table.q{width:100%;border-collapse:collapse;background:var(--card);border:1.5px solid var(--ink)}
+table.q td,table.q th{border-bottom:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;font-size:15px}
+table.q th{font-family:"JetBrains Mono";font-size:12px;text-transform:uppercase;background:var(--lime);color:#16150f}
+footer{padding:40px 0 70px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="kicker mono">ecomagents.ai · Meta ad storyboards · v1 for review · 30 Sep 2026</div>
+  <h1>Five worlds.<br><span class="hl">Fifty ads.</span> One ₹699 steal.</h1>
+  <p class="lede">Every ad below sells the same thing the same way: a pile of serious-looking product that is obviously worth far more than ₹699, shown big, in a world built around it. Pick your styles and your favourite five per style; I generate only after your go.</p>
+</div></header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#kit">Bundle Hero Kit</a><a href="#rules">Rules</a>
+  <a href="#s1">1 · Loot Drop</a><a href="#s2">2 · Public Spectacle</a><a href="#s3">3 · Phone Truth</a><a href="#s4">4 · Meme Lab</a><a href="#s5">5 · Headline Event</a><a href="#review">Your review</a>
+</div></nav>
+
+<section id="kit"><div class="wrap">
+  <div class="kicker mono">Shared across all 50 ads</div>
+  <h2>The Bundle Hero Kit</h2>
+  <p class="lede">The product has no physical form, so I give it one, and it stays identical in every world. That consistency is what makes 50 different ads read as one brand. Built from your site's own mockups and lime/ink/paper system, then upgraded with packaging-grade detail.</p>
+  <div class="grid2" style="margin-top:26px">
+    <div class="box lime"><h3>1 · The Master Box</h3>
+      <p>Matte ink-black rigid box (#16150F), soft-touch finish, lime spot-UV <b>e↗</b> mark, "ECOM AGENT OS" in Bricolage 800 debossed. Spine: <span class="mono">16 AGENTS / 391 FILES / 3 BONUSES</span>. Holographic foil seal "₹699 ONCE". Barcode, "VOL. 01" edition line, lime pull-ribbon, magnetic lid slightly ajar with lime light leaking out.</p></div>
+    <div class="box"><h3>2 · The 16 Agent Cartridges</h3>
+      <p>Slim boxes in the exact family of your 15-box collage (paper, ink, olive faces). Each carries its number 01 to 16, its real name (Store Audit, Paid Media, Retention...), a line icon, and a colour tab for its group: Acquire 4, Convert 3, Retain 2, Operate 7. Back panel spec list, all true: instruction file, intake brief, output template, prompt cards, operator SOP, scorecard, worked example, eval pack.</p></div>
+    <div class="box"><h3>3 · The 3 Bonus Crates</h3>
+      <ul class="tight">
+        <li><b>Retention Implementation Vault:</b> steel safe-door face, "46 RECORDS", ₹2,499 struck through</li>
+        <li><b>Profit + Growth Workbooks:</b> four spiral workbooks with tabbed edges, "95 FORMULAS", ₹1,999 struck</li>
+        <li><b>Promotion Operating Calendar:</b> desk flip calendar, "48 ROWS · 12 MONTHS", ₹1,499 struck</li>
+      </ul><p>Always tagged <b>FREE</b> or <b>₹0 INCLUDED</b>. Combined ₹5,997.</p></div>
+    <div class="box"><h3>4 · Price and proof devices</h3>
+      <ul class="tight">
+        <li>₹83,873 struck through, ₹699 in lime (your itemized value)</li>
+        <li>99% OFF (true: ₹699 is 0.83% of ₹83,873)</li>
+        <li>₹44 per agent · ₹1.79 per file · one-time, no per-seat fees</li>
+        <li>5,000+ marketers · 1,000+ stores (your figures)</li>
+        <li>Host strip: real Claude + ChatGPT marks composited in, plus Codex, Hermes, OpenClaw as text</li>
+      </ul></div>
+  </div>
+  <div class="refs">
+    <figure><img src="ref/static-ad-library.jpg" alt="Site mockup: 15 ad style boxes"><figcaption>Cartridge family (from site)</figcaption></figure>
+    <figure><img src="ref/exit-bundle-gift-v1.jpg" alt="Site mockup: gift chest"><figcaption>Gift chest energy (from site)</figcaption></figure>
+    <figure><img src="ref/meta-ads-ai-ebook-1000-orders.jpg" alt="Site mockup: ebook"><figcaption>Hardcover finish (add-on)</figcaption></figure>
+    <figure><img src="ref/video-swipe-library.jpg" alt="Site mockup: video swipe library"><figcaption>Video library (add-on)</figcaption></figure>
+    <figure><img src="ref/ugc-video-ad-templates.jpg" alt="Site mockup: UGC vault"><figcaption>UGC vault (add-on)</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <div class="kicker mono">Non-negotiables in every ad</div>
+  <h2>Rules that keep it big and honest</h2>
+  <div class="grid3" style="margin-top:26px">
+    <div class="box"><h3>Bundle shows big</h3><p>The Master Box plus cartridges fill at least 40% of the frame in every ad, including memes and phone screens. You can tell what is for sale in under a second.</p></div>
+    <div class="box"><h3>Name the buyer</h3><p>A qualifier line above every hook, rotating: D2C founders, performance marketers, ecommerce agencies, Shopify and Woo brands, media buyers, solo founders.</p></div>
+    <div class="box"><h3>Price in every frame</h3><p>₹699 once, always, with a value anchor beside it. CTA verb is unique to each ad, never repeated inside a style.</p></div>
+    <div class="box"><h3>Add-ons stay add-ons</h3><p>The ₹699 bundle is 16 agents + 391 files + 3 bonuses. The 4 add-ons and the free swipe-file gift never appear as included.</p></div>
+    <div class="box"><h3>No fake proof</h3><p>No invented ROAS, revenue, star ratings or customer quotes. Chats and memes are clearly dramatised; no real faces, no protected characters, no real brands beyond Claude and ChatGPT.</p></div>
+    <div class="box"><h3>Built for the feed</h3><p>Hook 2 to 7 words, readable at phone size, 6% safe border, one device per ad, no two neighbouring ads share a palette.</p></div>
+  </div>
+</div></section>
+
+<div id="styles"></div>
+
+<section id="review"><div class="wrap">
+  <div class="kicker mono">What I need from you</div>
+  <h2>Your review</h2>
+  <table class="q" style="margin-top:22px">
+    <tr><th style="width:34%">Question</th><th>My default if you say "go"</th></tr>
+    <tr><td><b>1. Styles.</b> Approve all five, or cut and swap?</td><td>All five.</td></tr>
+    <tr><td><b>2. Five per style.</b> Which 5 of the 10?</td><td>The ones marked <b>MY PICK</b> (25 total).</td></tr>
+    <tr><td><b>3. Deadline FOMO.</b> Is there a real end date or price rise for ₹699?</td><td>"Launch price" and "won't stay ₹699" wording, no fake countdown clock or invented date.</td></tr>
+    <tr><td><b>4. Coffee line.</b> ₹699 is about two café coffees, not one.</td><td>"Less than a chai per agent (₹44)" and "the price of two coffees".</td></tr>
+    <tr><td><b>5. Format.</b></td><td>4:5 (1080 x 1350), the Meta feed winner, plus 1:1 crops of the winners.</td></tr>
+  </table>
+</div></section>
+
+<footer><div class="wrap">Sources: ecomagents.ai live page on 30 Sep 2026 (offer.js, agents-data.js, pricing and bonus sections). 5,000+ marketers and 1,000+ stores supplied by the owner. Nothing generated yet.</div></footer>
+
+<script>
+const STYLES=[
+{id:"s1",name:"The Loot Drop",tag:"Maximalist mega-sale collage",
+premise:"A doorbuster explosion: festive mega-sale meets Black Friday meets a gaming loot box. The bundle is always overflowing, stacked, bursting, spilling out of something. This is the direct value-bomb style and the one I expect to carry the account.",
+why:"Your own read: for one-time digital products, showing the pile against the price is what converts. This style is that sentence, turned up to eleven.",
+palette:[["Sale red","#E0231B"],["Lime","#CDF13B"],["Ink","#16150F"],["Gold foil","#D9A441"],["Paper","#F4F1E8"]],
+type:"Ultra-condensed poster sans for hooks, Bricolage 800 on the boxes, receipt-mono for price lines. Starbursts with die-cut edges, never flat circles.",
+detail:"Glossy studio light with hard contact shadows and floor reflections; cellophane glints, tissue paper, confetti with motion blur, string-tied price tags, hazard tape, shrink-wrap creases. Every box shows edge wear, foil and emboss.",
+bundle:"Bundle is the hero at 55 to 70% of frame. Always the whole kit: Master Box + 16 cartridges + 3 crates.",
+fomo:"LAUNCH PRICE stickers, stock-style bars ('selling fast' without numbers), 'won't stay ₹699' tags.",
+pop:"Diwali and festive-sale culture, Black Friday doorbusters, blind-box unboxing craze, arcade claw machines, scratch cards.",
+picks:[1,2,3,4,6],
+ads:[
+["₹83,873 OF STUFF. ₹699.","D2C founders","A pedestal pyramid of all 16 cartridges and the 3 bonus crates, Master Box on top like a trophy, lime light pouring from its open lid. A huge red string-tied tag hangs off the pile.","Tag: ₹83,873 struck, ₹699 ONCE in lime. Band: 16 agents · 391 files · 3 bonuses.","Grab the pile"],
+["99% OFF. NOT A TYPO.","Performance marketers","A cash-register receipt spooling a metre long out of a till, itemizing every component at your site's listed values, curling over the counter where the bundle sits boxed and ready.","Receipt total ₹83,873, then TOTAL PAYABLE ₹699 circled in red marker.","Ring it up"],
+["OPEN ONE. GET SIXTEEN.","Ecommerce marketers","A blind-box mystery crate cracking open, 16 cartridges bursting out in an arc, each with a 'LEGENDARY' rarity glow and its agent name. Confetti frozen mid-air.","Crate label: 1 box, 16 agents, 391 files, ₹699.","Crack it open"],
+["UNDER ₹44 AN AGENT.","Shopify and Woo brands","A supermarket shelf lined with the 16 cartridges like premium cereal, shelf-edge labels reading ₹44 each, a 'BUY ALL 16: ₹699' wobbler, an overflowing trolley in the foreground.","Shelf strip: less than a chai per agent. Runs in ChatGPT or Claude.","Fill the trolley"],
+["EVERYTHING MUST GO.","Ecommerce agencies","Warehouse clearance: a forklift lifting a shrink-wrapped pallet of the whole bundle, pallet label with SKU and weight, hazard tape reading LAUNCH PRICE across the aisle.","Pallet sticker: agency-grade system, ₹699 once, no per-seat fees.","Load the pallet"],
+["₹5,997 OF BONUSES. FREE.","D2C founders","The 3 bonus crates on red velvet under spotlights, each with a satin bow and its struck price, the Master Box glowing behind them.","₹2,499 + ₹1,999 + ₹1,499 struck, big ₹0 INCLUDED. With the ₹699 bundle.","Claim all three"],
+["FESTIVE PRICE. ALL-YEAR TEAM.","Indian D2C founders","The bundle wrapped as a luxury festive gift hamper: marigold garlands, diyas, sparklers, the Promotion Calendar flipped open to twelve months of campaigns.","Hamper card: 16 agents, 3 bonuses, ₹699. Launch price, not forever.","Unwrap it early"],
+["THE WHOLE TEAM FITS IN ONE BOX.","Solo founders","A technical exploded view: Master Box floating mid-air with all 16 cartridges fanned out on leader lines, each labelled with its job, like a premium assembly diagram.","Callouts: Acquire 4 · Convert 3 · Retain 2 · Operate 7. ₹699 once.","Unbox the team"],
+["391 FILES. ONE COIN.","Media buyers","An arcade claw machine packed with agent cartridges and file cards, the claw lifting the Master Box, neon marquee, coin slot labelled ₹699.","Marquee: every drop wins all 16. Price shown on the coin slot.","Drop the coin"],
+["SCRATCH TO SEE WHAT ₹699 BUYS.","Ecommerce marketers","A giant lottery-style scratch card half scratched with a coin, silver flakes on the table. Revealed panels: 16 AGENTS, 391 FILES, 3 BONUSES, ₹83,873 VALUE. The bundle sits behind.","Final panel: YOU PAY ₹699. Every card wins.","Scratch and claim"]
+]},
+{id:"s2",name:"Public Spectacle",tag:"Billboards, crowds, city takeovers",
+premise:"The deal is so loud it takes over public space. Photoreal city scenes where the bundle is the biggest thing on the skyline and people stop to stare, film and point. Global icons plus Indian streets.",
+why:"Scale reads as legitimacy. A ₹699 file feels serious when it is forty metres tall and a crowd is filming it.",
+palette:[["Night navy","#0B1026"],["LED white","#F4F6FF"],["Lime","#CDF13B"],["Sodium amber","#F2A33A"],["Wet asphalt","#2A2C30"]],
+type:"Whatever the medium really uses: LED dot-matrix, split-flap, vinyl hoarding sans, stadium scoreboard numerals. The medium is the typeface.",
+detail:"Real OOH craft: LED pixel grid visible up close, vinyl seams and rigging bolts, weathered frames, lens flare, rain reflections, motion-blurred traffic. Crowds from behind or blurred, never a readable face.",
+bundle:"Bundle on the biggest screen or surface at 40 to 55% of frame; the hook lives on the in-world sign so it stays huge.",
+fomo:"Departure-board FINAL CALL, stadium countdowns, queues around the block, 'ad slot ends' framing.",
+pop:"Times Square takeovers, Mumbai local trains, split-flap airport boards, cricket night-match jumbotrons, drone shows, sneaker-drop queues.",
+picks:[1,3,4,6,8],
+ads:[
+["WE BOUGHT TIMES SQUARE TO SAY ₹699.","D2C founders","Every screen in the Times Square canyon shows the bundle at dusk; the hero tower screen runs the Master Box with cartridges orbiting it. Crowd with phones up, yellow cabs streaking.","Hero screen: ₹83,873 of agents for ₹699. Ticker: 5,000+ marketers · 1,000+ stores.","Get it before the slot ends"],
+["16 AGENTS. ARRIVING PLATFORM 1.","Indian D2C founders","A Mumbai local train fully wrapped in the 16 cartridges pulling into a crowded platform, commuters turning to look, overhead indicator board showing the bundle.","Indicator: ECOM AGENT OS · ₹699 · ON TIME. Runs in ChatGPT and Claude.","Board now"],
+["FINAL CALL FOR ₹699.","Performance marketers","A split-flap airport departure board, travellers stopped under it. Rows: AGENCY RETAINER: CANCELLED · 12 TOOLS: DELAYED · ECOM AGENT OS ₹699: BOARDING · LAUNCH PRICE: FINAL CALL. Bundle on the screen beside the board.","Gate sign: 16 agents · 391 files · 3 bonuses.","Make the flight"],
+["BUNDLE CAM.","Ecommerce marketers","Cricket night match, a floodlit stadium jumbotron doing a kiss-cam bit: 'BUNDLE CAM' circles a founder in the stands hugging the Master Box. Scoreboard below.","Scoreboard: 16 AGENTS · 391 FILES · ₹699. Crowd cheering.","Hit it for six"],
+["BUY SIGNAL.","Media buyers","A stock-exchange building's wrap-around LED ticker in green, traders on the steps looking up. Ticker: ECOM AGENT OS ▲ VALUE 120x PRICE. Bundle on the facade screen.","Sub-ticker: ₹83,873 value · ₹699 once · no per-seat fees.","Buy before it moves"],
+["THEY'RE QUEUING FOR A DOWNLOAD.","D2C founders","A mall atrium with a giant inflatable Master Box, a sneaker-drop style queue snaking around stanchions, LIMITED LAUNCH PRICE banners, security guard with a clipboard.","Banner: 16 agents, ₹699, no line online.","Skip the queue"],
+["LOOK UP.","Solo founders","A drone show over a city skyline at night, 800 drones forming the Master Box and the ₹699 price, a rooftop crowd silhouetted.","Drone text: 16 AGENTS · ₹699. Lower band: inside ChatGPT or Claude.","Look up, then check out"],
+["THREE BILLBOARDS. ONE CHOICE.","Ecommerce agencies","A dusty highway with three billboards in a row. One: YOUR AGENCY INVOICE. Two: YOUR 12 SUBSCRIPTIONS. Three, lit and new: OR 16 AGENTS FOR ₹699 ONCE, with the bundle.","Exit sign: NEXT EXIT: ₹699.","Take the exit"],
+["INTERVAL OFFER.","Performance marketers","An old single-screen cinema at intermission, audience silhouettes, projector beam, the screen showing the bundle as a vintage interval slide with a ₹699 price card.","Slide: 16 agents run while you watch the second half.","Before the second half"],
+["WE WRAPPED A BUILDING IN YOUR MARKETING TEAM.","Ecommerce agencies","A glass tower fully wrapped in the cartridge collage, the Master Box as its crown, street-level pedestrians stopped mid-crossing.","Street hoarding: 16 agents · 391 files · ₹699 once.","Move your team in"]
+]},
+{id:"s3",name:"Phone Truth",tag:"Pixel-faithful iPhone surfaces",
+premise:"The deal told through the screens founders live on: texts, notifications, notes, carts, stories. Exact iOS chrome, fonts and spacing, or not at all. The bundle appears as a photo, card or wallpaper inside the surface, and a bold hook band sits above the phone.",
+why:"Native surfaces get read, not skipped. They also let us say the coffee line and the 'runs inside ChatGPT' line in the buyer's own voice.",
+palette:[["iOS blue","#0A84FF"],["Bubble grey","#E9E9EB"],["Notes yellow","#FFD60A"],["Lime","#CDF13B"],["Graphite","#1C1C1E"]],
+type:"San Francisco-style system type, true iOS weights and sizes; hook band above the phone in Bricolage 800.",
+detail:"Real status bar, battery and signal, correct bubble tails, read receipts, notification grouping, haptic-press shadows. Phone held in a real hand on a desk with a coffee cup and a packing box for the ecommerce cue.",
+bundle:"Phone at 50 to 60% of frame, and the bundle image inside it is the biggest element on screen.",
+fomo:"'Is it still ₹699??' replies, unread badges, 'price goes up' reminders in the chat.",
+pop:"The screenshot-a-text meme culture, founder WhatsApp groups, Stories quiz stickers, cart-comparison posts.",
+picks:[1,2,3,4,7],
+ads:[
+["MY COFOUNDER TEXTED THIS AT 1 AM.","D2C founders","iMessage thread. Them: 'wait you got 16 AI agents for ₹699??' Photo bubble: the unboxed bundle. You: 'yes and the retention one already drafted our winback flow.' Them: 'inside ChatGPT?' You: 'or Claude.'","Hook band above phone. Bottom chip: 16 agents · 391 files · ₹699 once.","Text back 'buy it'"],
+["YOUR TEAM WORKED OVERNIGHT.","Performance marketers","Lock screen at 7:02 AM, wallpaper is the Master Box. Stacked notifications: Store Audit Agent: fixes ranked · Ad Creative Agent: hooks ready for review · Weekly Growth Agent: CAC spike flagged · Retention Agent: sequence drafted.","Every alert ends 'awaiting your approval'. Band: ₹699 once.","Wake up to it"],
+["THINGS I STOPPED PAYING FOR.","Solo founders","iPhone Notes list with ticked-off lines: monthly audit retainer, 4 prompt packs, a course I never opened, 2 AM copywriting. Last line: 'replaced with Ecom Agent OS, ₹699 once' with the bundle photo pasted in.","Note footer: 16 agents · 3 bonuses · no per-seat fees.","Make your list"],
+["2 COFFEES OR 16 AGENTS.","Ecommerce marketers","A generic food-delivery cart split screen. Left cart: 2 cappuccinos, ₹640. Right cart: Ecom Agent OS, 16 agents + 391 files, ₹699, with the bundle as the item photo.","Difference: ₹59. One of these runs your store.","Swap your cart"],
+["THE GROUP CHAT FOUND IT.","D2C founders","WhatsApp-style founders group, 47 unread. Someone asks who's using agents for ads; replies stack up with the bundle photo, '₹699, sixteen of them', 'runs in Claude', 'grab it before the price moves'. Initials only.","Pinned message: the bundle card with ₹83,873 struck.","Join the chat"],
+["SEARCH HISTORY OF A SMART FOUNDER.","Shopify and Woo brands","A plain search bar with autocomplete dropping down: 'automate my store with chatgpt', '16 ecommerce agents claude', 'agents for ₹699 one time'. Top result card shows the bundle.","Result card: 16 agents · 391 files · ₹699.","Skip the search"],
+["WHAT DOES ₹699 GET YOU?","Media buyers","An Instagram-style Story with a quiz sticker: A) 2 coffees B) 1 freelancer hour C) half a boost D) 16 agents + 391 files. D is ticked green. Story background is the bundle on a desk.","Link sticker: Get the bundle. Band: ₹83,873 value.","Tap D"],
+["GIVE YOUR WEEK BACK.","Solo founders","Calendar week view, before and after as two phones. Before: every slot jammed with ad copy, store audit, email flow, weekly report. After: the same slots reassigned to named agents, your slots empty except 'approve'.","Bottom card: bundle photo, ₹699 once.","Clear the calendar"],
+["HIRED 16. PAID ONCE.","Ecommerce agencies","An iPhone home screen with a folder named 'My Team' open, 16 lime app icons, one per agent, with red badges. Dock holds ChatGPT and Claude.","Widget on the screen: 391 files · 3 bonuses · ₹699.","Open the folder"],
+["YOUR INBOX, BUT IT'S ALL DONE.","Performance marketers","A mail app inbox of agent deliveries: 'Your ranked store audit', 'Draft: winback sequence', 'Weekly growth: 3 anomalies', 'Offer options + test plan'. Below them, a greyed-out 'Agency invoice #0917'.","Top banner mail shows the bundle. ₹699 once.","Clear the inbox"]
+]},
+{id:"s4",name:"Meme Lab",tag:"Classic memes, illustrated, bundle in 3D",
+premise:"The internet's most recognised meme compositions redrawn as clean bold-outline illustrations with anonymous figures, and the bundle dropped in as a fully rendered 3D object. The clash of flat drawing and glossy product makes the product pop off the joke.",
+why:"Performance marketers and agency folks live on memes; the format is decoded in half a second, so the whole glance goes to the bundle and the price.",
+palette:[["Meme white","#FFFFFF"],["Caption black","#111111"],["Lime","#CDF13B"],["Warm skin tan","#E7B98F"],["Alert orange","#FF6B1A"]],
+type:"Classic heavy caption type with black stroke for the joke labels; Bricolage for the price chip so the offer never looks like a joke.",
+detail:"One consistent illustration house style across all ten: thick ink outlines, flat fills with one grain texture, rendered 3D bundle with real shadows and reflections on the flat world. No real faces, no protected characters.",
+bundle:"The bundle is the punchline object in every meme, at 40 to 50% of frame.",
+fomo:"POV and 'your competitor already' framings, the joke is being late.",
+pop:"Drake yes/no, distracted boyfriend, galaxy brain, two buttons, trade offer, room-on-fire, midwit bell curve, stonks, Virgin vs Chad, POV captions.",
+picks:[1,2,3,5,7],
+ads:[
+["AGENCY OR ₹699?","Ecommerce marketers","Drake approve/disapprove format, illustrated figure. Nope panel: 'a monthly retainer for a PDF audit'. Yes panel: 'the 16-agent bundle, paid once', figure pointing at the 3D bundle.","Price chip: ₹699 once · ₹83,873 value.","Pick the right panel"],
+["EYES ON THE BUNDLE.","D2C founders","Distracted boyfriend composition. Founder turning to stare at the glowing 3D bundle; partner labelled 'my 14 SaaS subscriptions' glaring.","Chip: 16 agents · runs in ChatGPT or Claude · ₹699.","Turn around"],
+["LEVELS OF FOUNDER BRAIN.","Performance marketers","Expanding brain, four tiers: writing prompts from scratch · buying prompt packs · hiring an agency · 16 agents + one Brand Brain for ₹699, with the galaxy brain cradling the bundle.","Final tier label carries the price.","Go galaxy"],
+["THE HARDEST BUTTON.","Solo founders","Two buttons, sweating figure. Left button: 'pay ₹699 once'. Right: 'keep doing it all myself at 2 AM'. The bundle sits on the desk beside the buttons.","Caption under: it's not hard. 16 agents.","Press the left one"],
+["TRADE OFFER.","Ecommerce agencies","Trade offer figure in suit. I receive: ₹699. You receive: 16 agents, 391 files, 3 bonuses, 120 eval cases, stacked as the 3D bundle.","Chip: ₹83,873 value. One time.","Accept the trade"],
+["THIS IS NOT FINE.","D2C founders","Two panels. Panel 1: founder at a desk, room on fire, labels 'CAC up', 'stock out', 'email flow broken'. Panel 2: the same room calm, 16 cartridges lined up like a fire crew with the Master Box as the truck.","Chip: ₹699 once · approve every action.","Call the crew"],
+["THE BELL CURVE.","Performance marketers","Midwit bell curve. Left: 'just use ChatGPT'. Middle, crying: 'you need 12 tools, 3 agencies and a custom stack'. Right, calm: 'just use ChatGPT (with 16 agents for ₹699)' holding the bundle.","Chip: works in Claude too.","Skip the middle"],
+["STONKS.","Media buyers","Suited illustrated figure in front of a rising arrow chart. Bottom of the arrow: ₹699 spent. Top: ₹83,873 of value received, the bundle sitting on the peak.","Chip: 16 agents · 391 files. Value figure is your itemized total.","Ride the arrow"],
+["AVERAGE AGENCY VS ₹699 FOUNDER.","Ecommerce agencies","Virgin vs Chad walk. Left, hunched: 6 tools, 3 logins, monthly invoice, waits for reports. Right, striding: one Brand Brain, 16 agents, paid once, carrying the bundle on the shoulder.","Chip: ₹699 once.","Walk like that"],
+["POV: YOU FOUND IT FIRST.","D2C founders","POV caption meme: founder hugging the bundle, grinning, while through the window a competitor presses their face against the glass.","Caption: launch price won't stay ₹699.","Get there first"]
+]},
+{id:"s5",name:"Headline Event",tag:"Breaking news and blockbuster pop culture",
+premise:"The deal is treated as a news event or a film release. Front pages, broadcast graphics, film posters, auctions and game shows, each built with the real conventions of its medium so it looks produced, not faked up.",
+why:"News and cinema frame a price as an event, which is exactly the land-grab feeling you want. It also gives the bundle cinematic, premium lighting.",
+palette:[["Newsprint","#EDE6D3"],["Broadcast red","#C8102E"],["Cinema teal","#0E3B43"],["Lime","#CDF13B"],["Poster black","#0A0A0A"]],
+type:"Serif mastheads and condensed deck heads for print, broadcast sans for lower thirds, poster billing-block type for films.",
+detail:"Halftone photos, column rules, ink bleed; broadcast lower thirds with the live bug and ticker; film grain, rim light, poster billing block with credits. Fictional mastheads and channels only.",
+bundle:"Bundle as the lead photo, the film's hero object or the lot on the auction screen, 45 to 60% of frame.",
+fomo:"BREAKING, 'LAST DAY AT THIS PRICE' ticker (only if real), SOLD gavels, 'final question' pressure.",
+pop:"Front-page scandals, TV breaking news, heist films, cricket player auctions, quiz-show hot seats, ensemble movie posters, keynote reveals.",
+picks:[1,2,3,4,8],
+ads:[
+["PRICE ERROR? NO.","D2C founders","Front page of a fictional broadsheet, The Daily Checkout. Banner headline, lead halftone photo of the bundle, deck: ₹83,873 bundle sells for ₹699, sidebar columns listing the 16 agents.","Sidebar: 5,000+ marketers · 1,000+ stores.","Read it at checkout"],
+["BREAKING: AGENTS NOW ₹699.","Performance marketers","TV news studio, anonymous anchor, over-the-shoulder box showing the bundle. Lower third: 16 AI agents now run inside ChatGPT and Claude. Ticker: 391 files · 3 bonuses · launch price.","Live bug top corner. ₹699 once.","Catch it live"],
+["THE ₹699 JOB.","Ecommerce agencies","Heist film poster. Sixteen crew silhouettes, each with a cartridge, around the open Retention Vault spilling lime light. Title in heist-film type, tagline below.","Tagline: 16 specialists. One brand. No retainer. Billing block lists the agents.","Join the crew"],
+["SOLD FOR ₹699.","Indian D2C founders","Cricket-league player auction hall: auctioneer with gavel mid-slam, franchise-style tables of founders raising paddles, the big screen showing the bundle as the lot with its stats.","Screen stats: 16 agents · 391 files · 3 bonuses · base value ₹83,873.","Raise your paddle"],
+["FINAL ANSWER: D.","Solo founders","Quiz-show hot seat with dramatic blue light. Question: What does ₹699 get a D2C brand? A: 2 coffees B: 1 freelancer hour C: half an ad boost D: 16 agents + 391 files. D locked in orange.","Lifeline icon: Ask the Agent. Bundle on the side screen.","Lock it in"],
+["WANTED FOR DAYLIGHT ROBBERY.","Media buyers","Weathered wanted poster nailed to a wall, the bundle as the mugshot. Charge: taking ₹83,873 of value for ₹699. Reward line and tear-off tabs.","Last seen: inside ChatGPT and Claude.","Turn yourself in"],
+["EXHIBIT 16.","Ecommerce marketers","Museum hall, the bundle in a glass vitrine under a spotlight, velvet ropes, visitors from behind. Placard: 'The ₹699 system ecommerce teams run in ChatGPT, circa 2026'.","Placard lines: 16 agents · 391 files · 3 bonuses.","Take one home"],
+["16 AGENTS. ONE BRAND BRAIN.","Performance marketers","Ensemble blockbuster poster: 16 cartridges lined up like a cast in dramatic rim light, Master Box centred, city behind. Billing block: 'Starring Store Audit Agent, Paid Media Agent, Retention Agent...'","Release line: Now showing in ChatGPT and Claude. ₹699.","Get tickets"],
+["AND ONE MORE THING.","D2C founders","A dark keynote stage, presenter silhouette, giant screen reveal: the bundle rotating, then the price slide ₹699, audience phones up.","Slide footnote: 16 agents · 391 files · one time.","Watch the reveal"],
+["THE EVIDENCE BOARD.","Ecommerce agencies","Detective corkboard: polaroids of all 16 cartridges, red string converging on a receipt reading ₹699, sticky note 'this price should be illegal', the bundle in an evidence bag.","Case file tag: ₹83,873 value.","Close the case"]
+]}
+];
+const root=document.getElementById("styles");
+STYLES.forEach((s,i)=>{
+  const sec=document.createElement("section");sec.id=s.id;
+  sec.innerHTML=`<div class="wrap">
+  <div class="style-head"><div class="num">${i+1}</div><div><div class="kicker mono">${s.tag}</div><h2>${s.name}</h2></div></div>
+  <div class="grid2">
+   <div class="box"><h3>The world</h3><p>${s.premise}</p><p><b>Why it works:</b> ${s.why}</p></div>
+   <div class="box"><h3>Design system</h3>
+    <div class="swatches">${s.palette.map(p=>`<span class="sw"><i style="background:${p[1]}"></i>${p[0]} ${p[1]}</span>`).join("")}</div>
+    <dl class="spec"><dt>Type</dt><dd>${s.type}</dd><dt>Detailing</dt><dd>${s.detail}</dd><dt>Bundle rule</dt><dd>${s.bundle}</dd><dt>FOMO device</dt><dd>${s.fomo}</dd><dt>Pop culture</dt><dd>${s.pop}</dd></dl>
+   </div>
+  </div>
+  <div class="ads">${s.ads.map((a,j)=>{const pick=s.picks.includes(j+1);return `<article class="ad">
+    <div class="bar ${pick?"pick":""}"><span class="mono">${i+1}.${j+1}</span><span class="mono">${pick?"MY PICK":""}</span></div>
+    <div class="body"><div class="mono" style="color:var(--muted)">For ${a[1]}</div><div class="hook">${a[0]}</div>
+    <div class="row"><b>Scene</b><span>${a[2]}</span></div>
+    <div class="row"><b>Offer</b><span>${a[3]}</span></div>
+    <div class="row"><b>CTA</b><span>${a[4]}</span></div></div></article>`}).join("")}</div>
+  </div>`;
+  root.appendChild(sec);
+});
+</script>
+</body>
+</html>
