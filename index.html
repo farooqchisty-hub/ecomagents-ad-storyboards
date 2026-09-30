@@ -103,7 +103,6 @@ const T=[
 ["Comparison","Us vs Them chart","Two columns with tick and cross rows, one clearly lopsided.","Contrast makes the choice for them. A Motion top-10 format.","Motion, Backlinko, Ecom Circle","Ecom Agent OS vs 'agency + tools': cost, setup, memory, approval, per-seat fees.","A"],
 ["Comparison","Before / After","A split frame: the messy current state beside the clean new one.","Visible transformation; the most requested format by owners.","Motion, Adrio, Sovran","Before: a founder's 14 open tabs and a sticky-note wall. After: one ChatGPT window with the Brand Brain loaded and 16 agents.","A"],
 ["Comparison","Old way vs new way","Two columns, 3 to 5 rows, one reframed habit per row.","Reframes the default behaviour without naming a competitor.","Adrio","Old: brief a freelancer, wait 3 days. New: attach the Ad Creative Agent, review hooks in minutes.","A"],
-["Comparison","Choose your fighter","A video-game select screen, 3 or 4 characters with stat bars.","Playful choice; the stats do the comparing.","Our r10 batch","Fighters: the Agency, the Freelancer, the Prompt Pack, the Bundle (max stats, ₹699).","B"],
 ["Native UI","iPhone Notes","An exact iOS Notes checklist in the system font.","Personal and unposed; one of the most copied lo-fi formats.","Backlinko (Butcherbox), our batches","'Things I stopped paying for' ticked off, ending 'replaced with Ecom Agent OS ₹699', with a photo of the bundle.","A"],
 ["Native UI","iMessage thread","An exact blue and grey bubble thread, read receipts included.","Eavesdropping plus a peer's voice.","Dara Denney, our batches","A cofounder texting 'you got 16 AI agents for ₹699??' with a photo bubble of the bundle.","A"],
 ["Native UI","WhatsApp chat","A WhatsApp-style group or one-to-one chat, a friend recommending it.","The Indian founder's real channel for recommendations.","Dara Denney (native chat)","A founders group with 47 unread messages, the bundle photo pinned, 'still ₹699?' replies.","A"],
@@ -116,7 +115,6 @@ const T=[
 ["Native UI","Folder of files","A Finder or Drive window showing a fat folder tree and a big file count.","Tangible volume; people believe what they can count.","Inferred (digital product staple)","'Ecom Agent OS / 391 items' with 16 agent folders expanded. The Master Box sits in front of the screen.","A"],
 ["Native UI","Slack thread","A team Slack channel with emoji reactions and threads.","Peer adoption at work, ideal for agencies.","Our r11 batch, Superscale","#client-ops: 'we're running every client's audit through the Store Audit Agent now' 🔥 x12, the bundle image shared.","B"],
 ["Social proof","Big number social proof","'5,000+ marketers. 1,000+ stores.' as the hero, with a crowd or wall of avatars.","Bandwagon effect; fast credibility.","Demand Curve, Modash roundup","The number in huge type, a mosaic of anonymous store-logo tiles behind it, the bundle front and centre.","A"],
-["Social proof","Customer quote card","A big verbatim quote, name, role, and the product.","Borrowed trust. ★ Motion testimonial hit rate 6.5%.","Motion, AdDogs","A real buyer's line from your review section beside the bundle.","B","Only with real, permissioned customer quotes. No invented ones."],
 ["Meme and culture","Starter pack","'The D2C founder starter pack' grid of 5 to 7 cut-out items.","Identity plus native feel; a bundle is literally a starter pack.","Superscale","Items: a chai, a messy Shopify dashboard, a ring light, and the bundle as the one item that matters.","A"],
 ["Meme and culture","Drake yes / no","The two-panel approve and disapprove meme with an illustrated figure.","Preference decoded in half a second.","Our batches","No: 'monthly retainer for a PDF audit'. Yes: '16 agents, ₹699 once' beside the 3D bundle.","A"],
 ["Meme and culture","Trade offer","'I receive / You receive' with the suited figure.","Spells out the lopsided deal; perfect for value.","Our batches","I receive: ₹699. You receive: 16 agents, 391 files, 3 bonuses, 120 eval cases, stacked as the bundle.","A"],
@@ -135,7 +133,7 @@ const T=[
 ["FOMO and scarcity","Price-goes-up sticker","A big 'PRICE GOES UP SOON' or launch-price sticker slapped across the product.","Loss aversion; the classic launch-week driver.","Sovran (limited-time offer), inferred","A torn 'LAUNCH PRICE ₹699' sticker on the box, with a peeled corner showing a higher price underneath.","A","Only if a price rise is real. Tell me the real next price or date, otherwise I'll use 'launch price'."]
 ];
 const FAM=[...new Set(T.map(t=>t[0]))];
-const MY=[1,2,3,4,6,7,9,10,12,13,14,15,17,19,20,21,24,25,28,29,30,32,34,36,38,41,42,47,48,50];
+const MY=[1,2,3,4,6,7,9,10,12,13,14,15,17,18,19,20,21,23,24,25,28,29,34,35,37,40,41,47,46,49];
 let sel=new Set();try{JSON.parse(localStorage.getItem("eao-t")||"[]").forEach(n=>sel.add(n))}catch(e){}
 const main=document.getElementById("main");let filter=null;
 function render(){
